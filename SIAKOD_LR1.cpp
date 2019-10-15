@@ -46,3 +46,41 @@ putchar(ch);
 printf("\n");
 
 }
+
+int main() {
+
+setlocale(LC_ALL, "RUS");
+
+STR str;
+
+cout << "Введите unsigned int a: ";
+
+cin >> str.a;
+
+cout << "Двоичное значение: ";
+
+BinOut((unsigned char*)&str.a, sizeof(str.a));
+
+cout << "Введите long double b: ";
+
+cin >> str.b;
+
+cout<<"Двоичное значение: ";
+
+BinOut((unsigned char*)&str.b, sizeof(str.b));
+
+cout<<endl;
+
+cout<<"Для проверки введите двоичное значение unsigned int a: ";
+
+BinIn((unsigned char*)&str.a, sizeof(str.a));
+
+cout<<"Результат: "<<str.a<<endl;
+
+cout<<"Для проверки введите двоичное значение lomg double b: ";
+
+BinIn((unsigned char*)&str.b, sizeof(str.b));
+
+cout<<"Результат: "<<str.b<<endl;
+
+}
